@@ -1,0 +1,41 @@
+---
+common_packages:
+  - aptitude
+  - apt-show-versions
+  - chkconfig
+  - curl
+  - debconf
+  - debconf-utils
+  - dstat
+  - ethstatus
+  - finger
+  - htop
+  - iotop
+  - libcurl4-openssl-dev
+  - locate
+  - mc
+  - nmap
+  - openssl
+  - pigz
+  - python-psycopg2
+  - python-apt
+  - python-pycurl
+  - python-mysqldb
+  - python-software-properties
+  - python-passlib
+  - p7zip-full
+  - rsync
+  - screen
+  - ssl-cert
+  - sudo
+  - tree
+  - unzip
+  - vnstat
+  - vim
+  - wget
+
+common_wheezy_packages:
+  - update-notifier-common
+
+common_jessie_packages:
+  - reboot-notifier

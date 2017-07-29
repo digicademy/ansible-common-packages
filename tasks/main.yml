@@ -1,0 +1,20 @@
+---
+- name: update apt cache
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: Install packages common to all hosts
+  apt: name={{ item }} state=present
+  with_items: "{{ common_packages }}"
+
+- name: Install packages common to all wheezy hosts
+  apt: name={{ item }} state=present
+  with_items: "{{ common_wheezy_packages }}"
+  when: ansible_distribution_major_version == '7'
+
+- name: Install packages common to all jessie hosts
+  apt: name={{ item }} state=present
+  with_items: "{{ common_jessie_packages }}"
+  when: ansible_distribution_major_version == '8'
+
+- name: apt-get upgrade for all packages
+  apt: upgrade=yes
